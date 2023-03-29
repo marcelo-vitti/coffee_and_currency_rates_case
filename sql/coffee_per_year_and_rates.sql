@@ -34,13 +34,11 @@ WITH coffee_and_currency_base AS (
 
 SELECT 
   activity_year,
-  brl_usd_rate,
-  clp_usd_rate,
-  eur_usd_rate,
-  SUM(Volume) AS total_negotiated_coffee
+  SUM(CASE WHEN row_number_desc = 1 THEN brl_usd_rate ELSE 0 END) AS brl_usd_rate,
+  SUM(CASE WHEN row_number_desc = 1 THEN clp_usd_rate ELSE 0 END) AS clp_usd_rate,
+  SUM(CASE WHEN row_number_desc = 1 THEN eur_usd_rate ELSE 0 END) AS eur_usd_rate,
+  SUM(Volume)                                                     AS total_negotiated_coffee
 
 FROM coffee_and_currency_base
-
-WHERE row_number_desc = 1 -- Selecting only the last rate for that year
 
 GROUP BY activity_year
