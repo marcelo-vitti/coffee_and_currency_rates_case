@@ -3,7 +3,7 @@ WITH coffee_and_currency_base AS (
   SELECT
     strftime("%Y", coffee.Date) AS activity_year,
     coffee.Date,
-    coffee.Close,  
+    coffee.Volume,  
     AVG(
     CASE
       WHEN currency_rates.currency = "USDBRL" THEN currency_rates.rate
@@ -37,7 +37,7 @@ SELECT
   brl_usd_rate,
   clp_usd_rate,
   eur_usd_rate,
-  SUM(Close) AS total_negotiated_coffee
+  SUM(Volume) AS total_negotiated_coffee
 
 FROM coffee_and_currency_base
 
