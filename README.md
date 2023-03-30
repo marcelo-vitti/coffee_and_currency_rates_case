@@ -2,6 +2,8 @@
 
 This is the repository for the Pismo Analytics Engineer case about currency rates and coffee values, and negotiated volume.
 
+[Challenge link](https://docs.google.com/document/d/16WUlM6zMa0-3COcg6_ZD7mEScghxSeV_/edit?usp=sharing&ouid=103282881946233759113&rtpof=true&sd=true]
+
 In this ReadMe I will describe the three parts of the project and the ideas behind each part.
 
 The three parts are:
