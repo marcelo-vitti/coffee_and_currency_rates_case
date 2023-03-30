@@ -26,7 +26,7 @@ WITH coffee_and_currency_base AS (
 
   FROM coffee
 
-    LEFT JOIN currency_rates ON coffee.Date = currency_rates.activity_date
+    LEFT JOIN currency_rates ON coffee.Date = DATE(currency_rates.activity_date)
 
   GROUP BY activity_year, Date, Close
 
@@ -41,4 +41,4 @@ SELECT
 
 FROM coffee_and_currency_base
 
-GROUP BY activity_year
+GROUP BY activity_year;
