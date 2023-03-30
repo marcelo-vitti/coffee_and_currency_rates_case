@@ -12,6 +12,8 @@ The three parts are:
 
 3- [Dashboard with data visualizations](https://lookerstudio.google.com/reporting/50a4800b-3b88-44dd-97f0-c3ad37e31b35): the dashboard that contain the visualizations about the currency rates through time.
 
+Observation: The Google Colab Notebook is versioned in this [link](https://github.com/marcelo-vitti/coffee_and_currency_rates_case/blob/main/notebooks/Pismo_Analytics_Engineer.ipynb) on this repository.
+
 ## 1- Google Colab Notebook
 
 This [notebook](https://colab.research.google.com/drive/10UjWRFmEKLRJOsiv3M9ysA1qv2dXpBiM?usp=sharing) is holding all the Python code of the project, and it has some sections that I will describe their logic and how I imagine that it would work in production.
