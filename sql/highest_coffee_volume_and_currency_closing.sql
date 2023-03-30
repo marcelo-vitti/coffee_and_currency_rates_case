@@ -6,22 +6,22 @@ SELECT
   coffee.High AS higher_coffee_volume,
   AVG(
     CASE
-      WHEN currency_rates.currency = "USDBRL" THEN currency_rates.rate
+      WHEN currency_rates.currency = "BRL" THEN currency_rates.rate
       ELSE NULL
     END) AS brl_usd_rate,
   AVG(
     CASE
-      WHEN currency_rates.currency = "USDCLP" THEN currency_rates.rate
+      WHEN currency_rates.currency = "CLP" THEN currency_rates.rate
       ELSE NULL
     END) AS clp_usd_rate,
   AVG(
     CASE
-      WHEN currency_rates.currency = "USDEUR" THEN currency_rates.rate
+      WHEN currency_rates.currency = "EUR" THEN currency_rates.rate
       ELSE NULL
     END) AS eur_usd_rate
   
 FROM coffee
 
-  INNER JOIN currency_rates ON coffee.Date = currency_rates.activity_date
+  LEFT JOIN currency_rates ON coffee.Date = DATE(currency_rates.activity_date)
 
-GROUP BY coffee.Date, coffee.High
+GROUP BY coffee.Date, coffee.High;
