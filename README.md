@@ -47,7 +47,7 @@ If this product would go into production, probably I would need to pay for a sub
 
 ### 1.3- Get SQL Queries results
 
-Now I am opening the three SQL files located in Github that contains the SQL query responsible for answering the three questions present in the [challenge](https://docs.google.com/document/d/16WUlM6zMa0-3COcg6_ZD7mEScghxSeV_/edit#). After opening this files, I am querying the SQLite tables that I built in the previous step.
+Now I am using the three SQL queries that are also located in Github that contains the SQL query responsible for answering the three questions present in the [challenge](https://docs.google.com/document/d/16WUlM6zMa0-3COcg6_ZD7mEScghxSeV_/edit#). After opening this files, I am querying the SQLite tables that I built in the previous step.
 
 Questions:
 
