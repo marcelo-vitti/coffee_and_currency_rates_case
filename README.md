@@ -42,6 +42,9 @@ With that dataframe ready, I transform it into a SQL statement using SQLite and 
 
 This is a very simple section. I am reading the *coffee.csv* file from Github (it could be located in S3, Cloud Storage, or another storage service) on this [link](https://github.com/marcelo-vitti/coffee_and_currency_rates_case/blob/main/external_sources/coffee.csv). After that, I am creating and inserting this data into a new table.
 
+Observation: in this step we are doing a lot of requests in the currencies API, with that in mind, I left a new API Key on the Notebook, but I think that this key will be able to be used just once after it runs once it will run out of free requests.
+If this product would go into production, probably I would need to pay for a subscription to this API to have more requests.
+
 ### 1.3- Get SQL Queries results
 
 Now I am opening the three SQL files located in Github that contains the SQL query responsible for answering the three questions present in the [challenge](https://docs.google.com/document/d/16WUlM6zMa0-3COcg6_ZD7mEScghxSeV_/edit#). After opening this files, I am querying the SQLite tables that I built in the previous step.
